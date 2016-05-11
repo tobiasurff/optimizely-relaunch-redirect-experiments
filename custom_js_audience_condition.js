@@ -1,0 +1,1 @@
+optimizelyRedirect.getMappedUrl(window.location.href) !== false
