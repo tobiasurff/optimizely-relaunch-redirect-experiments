@@ -30,9 +30,12 @@ window.optimizelyRedirect = {
 }
 
 optimizelyRedirect.url_mappings.push({
-  "origin": "urff.me/?(\\?.*)?$",
-  "destination": "http://tobiasurff.nl/"
+  "origin": "www.optimizely.com/?(\\?.*)?$",
+  "destination": "https://beta.optimizely.com/"
 }, {
-  "origin": "/example/test.aspx",
-  "destination": "http://example.net/funky-example/funky-test"
+  "origin": "www.optimizely.com/resources/customer-stories",
+  "destination": "https://beta.optimizely.com/happy-customers"
+}, {
+  "origin": "www.optimizely.com/.*",
+  "destination": "https://beta.optimizely.com/"
 });
