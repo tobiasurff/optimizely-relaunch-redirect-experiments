@@ -1,6 +1,10 @@
 window.optimizelyRedirect = {
   url_mappings: [],
   getMappedUrl: function(originurl) {
+    // Check if user is navigating to this page from the same domain (to avoid switching sites mid-session)
+    if (document.referrer.indexOf(window.location.hostname) <= 0){
+      return false;
+    }
     // Check one by one if url has mapping and return url, else return false
     for (var i = 0; i < window.optimizelyRedirect.url_mappings.length; i++) {
       if (RegExp(window.optimizelyRedirect.url_mappings[i].origin).test(originurl)) {
